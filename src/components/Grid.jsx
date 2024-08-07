@@ -12,7 +12,7 @@ const GridContainer = styled.div`
   grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1rem;
-  background: black;
+  color:white;
   @media (min-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -24,13 +24,15 @@ const GridContainer = styled.div`
 const ImageContainer = styled.div`
   position: relative;
   overflow: hidden;
-  border-radius: 0.5rem;
+  shadow:12px 10px;
+
   &:hover img {
     transform: scale(1.1);
   }
   &:hover div, &:hover p {
     opacity: 1;
   }
+  
 `;
 
 const Image = styled.img`
@@ -75,7 +77,7 @@ const Modal = styled.div`
 
 const ModalContent = styled.div`
   position: relative;
-  background: white;
+
   padding: 1rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -150,10 +152,10 @@ const Grid = () => {
 
   return (
     <>
-      <GlobalStyle modalOpen={modalOpen} />
-      <GridContainer>
+      <GlobalStyle modalOpen={modalOpen} className='bg-white' />
+      <GridContainer className='bg-white' >
         {images.map((image, index) => (
-          <ImageContainer key={index} onClick={() => openModal(image)}>
+          <ImageContainer   className='bg-white'    key={index} onClick={() => openModal(image)}>
             <Image src={image} alt={`Image ${index + 1}`} />
             <Overlay />
         
@@ -167,7 +169,15 @@ const Grid = () => {
           <Modal>
             <ModalContent>
               <ModalImage src={currentImage} alt="Enlarged" />
-              <Button onClick={() => downloadImage(currentImage)}>Download</Button>
+            
+                  <button onClick={() => downloadImage(currentImage)} class="cursor-pointer group relative flex gap-1.5 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition font-semibold shadow-md">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24px" width="24px"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#f1f1f1" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" id="Vector"></path> </g> </g></svg>
+                            Download
+                      
+                       </button>
+                      
+
+
               <Button onClick={closeModal}>Close</Button>
             </ModalContent>
           </Modal>

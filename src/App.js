@@ -2,7 +2,7 @@ import React  from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 
-import Button from "./components/Button";
+import Home from "./components/Home";
 import GRID_ from "./components/GRID_"
 import Footer from "./components/Footer";
 
@@ -11,11 +11,10 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <> 
-    <div className="App"  >
+    <div className="App"  class=" bg-white " >
         <Navbar />
         <Hero />
-       
-         <GRID_ />
+        <Home />
         <Footer />
     </div>
     </>

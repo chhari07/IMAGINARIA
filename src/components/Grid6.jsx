@@ -24,7 +24,7 @@ const GridContainer = styled.div`
 const ImageContainer = styled.div`
   position: relative;
   overflow: hidden;
-  
+ 
   &:hover img {
     transform: scale(1.1);
   }
@@ -75,7 +75,7 @@ const Modal = styled.div`
 
 const ModalContent = styled.div`
   position: relative;
-  
+
   padding: 1rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -117,15 +117,15 @@ const Button = styled.button`
 `;
 
 const images = [
-  'https://wallpapercave.com/wp/wp12122760.jpg',
-  'https://wallpapercave.com/wp/wp12122634.jpg',
-  'https://wallpapercave.com/wp/wp12336175.jpg',
-  'https://wallpapercave.com/wp/wp12336238.jpg',
-  'https://wallpapercave.com/wp/wp12336239.jpg',
-  'https://wallpapercave.com/wp/wp12336244.jpg',
+  ' https://wallpapercave.com/wp/wp6629378.jpg',
+  '  https://wallpapercave.com/wp/wp6629386.jpg',
+  ' https://wallpapercave.com/wp/wp6629400.jpg   ',
+  ' https://wallpapercave.com/wp/wp6629438.jpg  ',
+  ' https://wallpapercave.com/wp/wp6629536.jpg ',
+  ' https://wallpapercave.com/wp/wp6629564.jpg ',
 ];
 
-const Grid4 = () => {
+const Grid6 = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState('');
 
@@ -181,4 +181,4 @@ const Grid4 = () => {
   );
 };
 
-export default Grid4;
+export default Grid6;

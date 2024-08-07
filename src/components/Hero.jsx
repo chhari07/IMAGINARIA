@@ -1,34 +1,47 @@
 import React from 'react';
-import './Hero.css';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-function Hero() {
+const Hero = () => {
+  const carouselStyle = {
+    width: '100%',
+    maxWidth: '1230px', // max width for large screens
+  
+  };
+
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 w-full h-full object-cover"
+    <div style={carouselStyle}>
+      <Carousel 
+        showThumbs={false} 
+        infiniteLoop 
+        useKeyboardArrows 
+        autoPlay 
+        dynamicHeight
       >
-        <source
-          src="https://cdn.pixabay.com/video/2022/05/11/116679-708909908_large.mp4"
-          type="video/mp4"
-        />
-       
-      </video>
-      <div className="relative z-10 flex items-center justify-center min-h-screen bg-opacity-60 bg-black">
-        <div className="text-neutral-content text-center max-w-md">
-       
-      
-          <div className="flex items-center justify-center p-5">
-          <h1 className="text-7xl font-bold">IMAGINARIA</h1>
-        
-          </div>
-          <p className="text-2xl font-bold">just imagine</p>
+        <div>
+          <img src="  https://wallpapercave.com/wp/wp2598648.jpg         " alt="Slide 1" />
         </div>
-      </div>
+        <div>
+          <img src="https://wallpapercave.com/wp/E8XUOvx.jpg  " alt="Slide 2" />
+        </div>
+        <div>
+          <img src="https://wallpapercave.com/wp/wp2598653.jpg         " alt="Slide 3" />
+        </div>
+        <div>
+          <img src=" https://wallpapercave.com/wp/wp2598686.jpg    " alt="Slide 4" />
+        </div>
+        <div>
+          <img src="  https://wallpapercave.com/wp/wp2598663.jpg    " alt="Slide 5" />
+        </div>
+        <div>
+          <img src=" https://wallpapercave.com/wp/wp2491611.jpg      " alt="Slide 6" />
+        </div>
+        <div>
+          <img src=" https://wallpapercave.com/wp/wp4606199.jpg      " alt="Slide 7" />
+        </div>
+      </Carousel>
     </div>
   );
-}
+};
 
 export default Hero;

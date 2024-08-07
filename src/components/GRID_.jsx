@@ -5,6 +5,8 @@ import Grid2 from './Grid2';
 import Grid3 from './Grid3';
 import Grid4 from './Grid4';
 import Grid5 from './Grid5';
+import Grid6 from './Grid6';
+import Grid7 from './Grid7';
 
 const GRID_ = () => {
   const [gridType, setGridType] = useState('Grid');
@@ -21,37 +23,100 @@ const GRID_ = () => {
        return <Grid4 />;
       case 'Grid5':
          return <Grid5 />;
+      case 'Grid6':
+         return <Grid6 />;
+      case 'Grid7':
+        return <Grid7 />;   
+         
       default:
         return <Grid />;
     }
   };
 
   return (
-    <div className="App text-center   bg-black"  >
-      <div className="my-4 bg-black">
+    <div className="App text-center   bg-white"  >
+      <div className="my-4 bg-white">
       <div>  
-     <div class="grid grid-cols-3 gap-5">     
-     <div class="border-b border-gray-200 bg-black">
-  <nav class="flex justify-center   ml-44 pl-40    gap-x-8" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
-    <button onClick={() => setGridType('Grid')} type="button" class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500 active" id="horizontal-alignment-item-1" aria-selected="true" data-hs-tab="#horizontal-alignment-1" aria-controls="horizontal-alignment-1" role="tab">
-      CARS
-    </button>
-    <button  onClick={() => setGridType('Grid2')} type="button" class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500" id="horizontal-alignment-item-2" aria-selected="false" data-hs-tab="#horizontal-alignment-2" aria-controls="horizontal-alignment-2" role="tab">
-      DROGON BALL Z
-    </button>
-    <button  onClick={() => setGridType('Grid3')} type="button" class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500" id="horizontal-alignment-item-3" aria-selected="false" data-hs-tab="#horizontal-alignment-3" aria-controls="horizontal-alignment-3" role="tab">
-      INDIAN ARMED FORCES
-    </button>
-    <button  onClick={() => setGridType('Grid4')} type="button" class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500" id="horizontal-alignment-item-3" aria-selected="false" data-hs-tab="#horizontal-alignment-3" aria-controls="horizontal-alignment-3" role="tab">
-    VIRAT KOHLI
-    </button>
-    <button  onClick={() => setGridType('Grid5')} type="button" class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent text-sm whitespace-nowrap text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-blue-500" id="horizontal-alignment-item-3" aria-selected="false" data-hs-tab="#horizontal-alignment-3" aria-controls="horizontal-alignment-3" role="tab">
-      COMICS SUPERHEROS
-    </button>
-  </nav>
-</div>
+    
+     
+     
+    
+    <div class="w-full"  >
+  <div class="relative right-0">
+    <ul class="relative flex flex-wrap p-1 list-none rounded-lg bg-blue-gray-50/60" data-tabs="tabs" role="list">
+    <li className="z-30 flex-auto text-center">
+                    <button onClick={() => setGridType('Grid')} className="overflow-hidden relative w-32 p-2 mt-3 h-12 bg-black text-white border-none rounded-md text-sm font-bold cursor-pointer z-10 group">
+                      CARS
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                      <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10">CARS</span>
+                    </button>
+                  </li>
+                  <li className="z-30 flex-auto text-center">
+                    <button onClick={() => setGridType('Grid2')} className="overflow-hidden relative w-32 p-2 mt-3 h-12 bg-black text-white border-none rounded-md text-sm font-bold cursor-pointer z-10 group">
+                      DRAGON BALL Z
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                      <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10">DRAGON BALL Z</span>
+                    </button>
+                  </li>
+                  <li className="z-30 flex-auto text-center">
+                    <button onClick={() => setGridType('Grid3')} className="overflow-hidden relative w-32 p-2 mt-3 h-12 bg-black text-white border-none rounded-md text-sm font-bold cursor-pointer z-10 group">
+                      INDIAN ARMED FORCES
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                      <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10">INDIAN ARMED FORCES</span>
+                    </button>
+                  </li>
+                  <li className="z-30 flex-auto text-center">
+                    <button onClick={() => setGridType('Grid4')} className="overflow-hidden relative w-32 p-2 mt-3 h-12 bg-black text-white border-none rounded-md text-sm font-bold cursor-pointer z-10 group">
+                      VIRAT KOHLI
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                      <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10">VIRAT KOHLI</span>
+                    </button>
+                  </li>
+                  <li className="z-30 flex-auto text-center">
+                    <button onClick={() => setGridType('Grid5')} className="overflow-hidden relative w-32 p-2 mt-3 h-12 bg-black text-white border-none rounded-md text-sm font-bold cursor-pointer z-10 group">
+                      COMIC HEROES
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                      <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10">COMIC HEROES</span>
+                    </button>
+                  </li>
+                  <li className="z-30 flex-auto text-center">
+                    <button onClick={() => setGridType('Grid6')} className="overflow-hidden relative w-32 p-2 mt-3 h-12 bg-black text-white border-none rounded-md text-sm font-bold cursor-pointer z-10 group">
+                      INDIAN CULTURE
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                      <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10">INDIAN CULTURE</span>
+                    </button>
+                  </li>
+                  <li className="z-30 flex-auto text-center">
+                    <button onClick={() => setGridType('Grid7')} className="overflow-hidden relative w-32 p-2 h-12 mt-3 bg-black text-white border-none rounded-md text-sm font-bold cursor-pointer z-10 group">
+                      ISRO LAUNCH
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                      <span className="absolute w-36 h-32 -top-8 -left-2 bg-purple-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                      <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10">ISRO LAUNCH</span>
+                    </button>
+                  </li>
+    </ul>
+  </div>
+</div> 
 
-         </div>
+
+
+
+
+
+        
        
               </div>
 
